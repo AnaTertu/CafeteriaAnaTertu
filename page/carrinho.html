@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="
-en">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -17,9 +16,9 @@ en">
 
   <nav>
     <ul>
-      <li><a href="#">Home</a></li>
+      <li><a href="/">Home</a></li>
       <li><a href="#">Cafés Especiais</a></li>
-      <li><a href="#">Carrinho</a></li>
+      <li><a href="/page/carrinho.html">Carrinho</a></li>
       <li><a href="#">Contato</a></li>
     </ul>
   </nav>
@@ -44,7 +43,7 @@ en">
             <!-- Itens do carrinho serão adicionados aqui -->
           </tbody>
         </table>
-        <h3 id="total-carrinho">Total: R$ 0,00</h3>
+        <h3 id="total-carrinho"></h3>
         <button id="btn-checkout">Checkout</button>
       </div> 
     </section>
@@ -55,19 +54,19 @@ en">
   </footer>
 
   <script>
-    // Obtendo o parâmetro "produto" da URL
+    // Obter parâmetro "produto" da URL
     const urlParams = new URLSearchParams(window.location.search);
     const produtoId = urlParams.get('produto');
 
-    // Função para adicionar o produto ao carrinho
+    // Função p/ add o produto ao carrinho
     function adicionarAoCarrinho(produto) {
       const tabelaItens = document.getElementById('itens-carrinho');
       const totalCarrinho = document.getElementById('total-carrinho');
 
-      // Criar uma nova linha na tabela
+      // Criar nova linha na tabela
       const novaLinha = document.createElement('tr');
 
-      // Colunas da linha
+      // Colunas / linha
       const colunaNome = document.createElement('td');
       colunaNome.textContent = produto.nome;
 
@@ -87,17 +86,16 @@ en">
       botaoRemover.addEventListener('click', () => removerItemCarrinho(produto.nome));
       colunaRemover.appendChild(botaoRemover);
 
-      // Adicionar colunas à linha
+      // Add colunas à linha
       novaLinha.appendChild(colunaNome);
       novaLinha.appendChild(colunaQuantidade);
       novaLinha.appendChild(colunaPreco);
       novaLinha.appendChild(colunaRemover);
 
-      // Ad
-      // Adicionar nova linha à tabela
+      // Add nova linha à tabela
       tabelaItens.appendChild(novaLinha);
 
-      // Atualizar total do carrinho
+      // Atualizar itens no total do carrinho
       const itensCarrinho = tabelaItens.getElementsByTagName('tr');
       let total = 0;
 
@@ -112,7 +110,7 @@ en">
       totalCarrinho.textContent = 'Total: R$ ' + total.toFixed(2);
     }
 
-    // Função para remover um item do carrinho
+    // Função remover item do carrinho
     function removerItemCarrinho(nome) {
       const tabelaItens = document.getElementById('itens-carrinho');
       const itensCarrinho = tabelaItens.getElementsByTagName('tr');
