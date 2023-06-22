@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Arquivo CSS com os estilos personalizados -->
+</head>
+
+<body>
+  <h1>Checkout</h1>
+
+  <form id="checkout-form">
+    <label for="name">Nome:</label>
+    <input type="text" id="name" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" required>
+
+    <label for="address">Endereço:</label>
+    <textarea id="address" required></textarea>
+
+    <label for="payment">Método de pagamento:</label>
+    <select id="payment" required>
+      <option value="">Selecione</option>
+      <option value="credit-card">Cartão de Crédito</option>
+      <option value="paypal">PayPal</option>
+      <option value="transfer">Transferência Bancária</option>
+    </select>
+
+    <button type="submit">Finalizar Compra</button>
+  </form>
+
+  <script src="checkout.js"></script> <!-- Arquivo JavaScript com a lógica do checkout -->
+</body>
+
+</html>
