@@ -1,0 +1,15 @@
+{
+  "name": "cypress-cafeteria-da-ti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ana Tertuliano",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^12.5.0"
+  }
+}
