@@ -19,8 +19,9 @@ form {
 }
 
 form label {
-  display: block;
+  display: -webkit-box;
   margin-bottom: 8px;
+  padding: 5px;
   font-weight: bold;
   color: #333;
 }
@@ -28,10 +29,15 @@ form label {
 input,
 textarea,
 select {
-  width: 100%;
+  width: 80%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+
+input,
+textarea {
+  margin-bottom: 20px;
 }
 
 button[type="submit"] {
@@ -138,7 +144,7 @@ nav ul li {
   background-position: center;
   text-align: center;
   color: #fff;
-  padding: 80px 20px;
+  padding: 50px 15px;
 }
 
 .hero h2 {

@@ -27,6 +27,3 @@ function processarCheckout(event) {
     // Redirecionar para uma página de confirmação de compra, se necessário
     // window.location.href = 'pagina-confirmacao.html';
   }
-  
-  // Event listener para o envio do formulário de checkout
-  document.getElementById('checkout-form').addEventListener('submit', processarCheckout);
