@@ -7,4 +7,4 @@ function animateButton() {
 }
 
 // Adiciona um ouvinte de evento de clique ao botão
-exploreButton.addEventListener('click', animateButton);
+//exploreButton.addEventListener('click', animateButton);
