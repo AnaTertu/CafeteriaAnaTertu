@@ -18,7 +18,7 @@
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="../page/carrinho.html">Carrinho</a></li>
-      <li><h3><a href="../page/checkout.html">Dados do Cliente</a></h3></li>
+      <li><h3><a href="../page/checkout.html">Cadastro</a></h3></li>
     </ul>
   </nav>
 
@@ -46,18 +46,51 @@
         </select>
 
         <button type="submit">Finalizar Compra</button>
-
-        <input type="submit" value="Checkout">
         
       </form>
 
   </main>
+
+  <div class="mapa">
+    <br/><br/>
+    <h3>Mapa do site</h3>
+    <br/>
+    <img src="../img/mapa.jpeg" alt="Mapa do site">
+  </div>
 
   <footer>
     <p>&copy; 2023 Cafeteria da TI. Todos os direitos reservados.</p>
   </footer>
 
   <script src="../script/checkout.js"></script> <!-- Arquivo JavaScript com a lógica do checkout -->
+
+  <script>
+
+      // Importar o script forms.js
+      const forms = require('../db/forms.js');
+
+      // Adicionar um ouvinte de evento para o envio do formulário
+      document.getElementById('checkout-form').addEventListener('submit', function(event) {
+        // Impedir o envio padrão do formulário
+        event.preventDefault();
+
+        // Obter os valores do formulário
+        const nome = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const endereco = document.getElementById('address').value;
+        const metodoPagamento = document.getElementById('payment').value;
+
+        // Chamar a função para inserir os dados no banco de dados
+        forms.inserirDadosFormulario(nome, email, endereco, metodoPagamento);
+
+        // Exibir uma mensagem de sucesso (você pode personalizar conforme necessário)
+        alert('Compra finalizada com sucesso!');
+
+        // Redirecionar ou realizar outras ações após a conclusão do formulário
+        window.location.href = 'dadoscliente.db';
+      });
+
+  </script>
 
 </body>
 
