@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafeteria da TI</title>
   <link rel="stylesheet" href="../styles/carrinho.css">
-  <script src="../script/carrinho.js"></script>
+  <!-- <script src="../script/carrinho.js"></script --> 
 </head>
 
 <body>
@@ -40,10 +40,15 @@
           </thead>
           <tbody id="itens-carrinho">
             <!-- Itens do carrinho serão adicionados aqui -->
+              
           </tbody>
         </table>
         <h3 id="total-carrinho"></h3>
         <button id="btn-checkout">Checkout</button>
+
+        <!-- Botão para adicionar mais produtos -->
+        <button id="btn-adicionar-produtos" onclick="adicionarMaisProdutos()"> Adicionar mais produtos </button>
+      
       </div> 
     </section>
   </main>
@@ -57,42 +62,51 @@
     const urlParams = new URLSearchParams(window.location.search);
     const produtoId = urlParams.get('produto');
 
-    // Função p/ add o produto ao carrinho
-    function adicionarAoCarrinho(produto) {
-      const tabelaItens = document.getElementById('itens-carrinho');
-      const totalCarrinho = document.getElementById('total-carrinho');
+     // Função para adicionar mais produtos
+     function adicionarMaisProdutos() {
+      // Redirecionar para a página de produtos (substitua "index.html" pelo caminho correto)
+      window.location.href = "../page/index.html";
+    }
+
+    // Verificar se há um produto para adicionar ao carrinho
+    if (produtoId) {
+      // Obter o produto com base no ID
+      const produto = {
+        name: '',
+        preco: 0
+      };
 
       switch (produtoId) {
         case '1':
-          produto.nome = 'Café Expresso';
+          produto.name = 'Café Expresso';
           produto.preco = 6.00;
           break;
         case '2':
-          produto.nome = 'Café Latte';
+          produto.name = 'Café Latte';
           produto.preco = 10.00;
           break;
         case '3':
-          produto.nome = 'Cappuccino';
+          produto.name = 'Cappuccino';
           produto.preco = 12.00;
           break;
         case '4':
-          produto.nome = 'Macchiato';
+          produto.name = 'Macchiato';
           produto.preco = 10.00;
           break;
         case '5':
-            produto.nome = 'Café Mocha';
-            produto.preco = 14.00;
-            break;
+          produto.name = 'Café Mocha';
+          produto.preco = 14.00;
+          break;
         case '6':
-          produto.nome = 'Café Latte';
+          produto.name = 'Café Latte';
           produto.preco = 10.00;
           break;
         case '7':
-          produto.nome = 'Cappuccino';
+          produto.name = 'Cappuccino';
           produto.preco = 12.00;
           break;
         case '8':
-          produto.nome = 'Macchiato';
+          produto.name = 'Macchiato';
           produto.preco = 10.00;
           break;
       }
@@ -101,20 +115,37 @@
       adicionarAoCarrinho(produto);
     }
 
-    // Verificar se há um produto para adicionar ao carrinho
-    if (produtoId) {
-      // Obter o produto com base no ID
-      const produto = {
-        nome: '',
-        preco: 0
-      };
+    // Função p/ adicionar o produto ao carrinho
+    function adicionarAoCarrinho(produto) {
+      const tabelaItens = document.getElementById('itens-carrinho');
+      const totalCarrinho = document.getElementById('total-carrinho');
 
-      // Criar nova linha na tabela
+      // Verificar se o produto já está no carrinho
+      const itensCarrinho = tabelaItens.getElementsByTagName('tr');
+      let produtoExistente = null;
+    
+      for (let i = 0; i < itensCarrinho.length; i++) {
+        const item = itensCarrinho[i];
+        const nomeItem = item.getElementsByTagName('td')[0].textContent;
+    
+        if (nomeItem === produto.name) {
+          produtoExistente = item;
+          break;
+        }
+      }
+    
+      if (produtoExistente) {
+        // Produto já está no carrinho, incrementar quantidade
+        const inputQuantidade = produtoExistente.getElementsByTagName('input')[0];
+        inputQuantidade.value = (parseInt(inputQuantidade.value) + 1).toString();
+      } else {
+        
+      // Adicionar o produto ao carrinho
       const novaLinha = document.createElement('tr');
 
-      // Colunas / linha
+      // Colunas / linha (exemplo)
       const colunaNome = document.createElement('td');
-      colunaNome.textContent = produto.nome;
+      colunaNome.textContent = produto.name;
 
       const colunaQuantidade = document.createElement('td');
       const inputQuantidade = document.createElement('input');
@@ -129,7 +160,7 @@
       const colunaRemover = document.createElement('td');
       const botaoRemover = document.createElement('button');
       botaoRemover.textContent = 'Remover';
-      botaoRemover.addEventListener('click', () => removerItemCarrinho(produto.nome));
+      botaoRemover.addEventListener('click', () => removerItemCarrinho(produto.name));
       colunaRemover.appendChild(botaoRemover);
 
       // Add colunas à linha
@@ -142,12 +173,12 @@
       tabelaItens.appendChild(novaLinha);
 
       // Atualizar itens no total do carrinho
-      const itensCarrinho = tabelaItens.getElementsByTagName('tr');
       let total = 0;
+      const itensCarrinho = tabelaItens.getElementsByTagName('tr');
 
       for (let i = 0; i < itensCarrinho.length; i++) {
         const item = itensCarrinho[i];
-        const precoTexto = item.getElementsByTagName('td')[0].textContent;
+        const precoTexto = item.getElementsByTagName('td')[2].textContent;
         const preco = parseFloat(precoTexto.replace('R$', '').trim());
         const quantidade = parseInt(item.getElementsByTagName('input')[0].value);
         total += preco * quantidade;
@@ -157,7 +188,7 @@
     }
 
     // Função remover item do carrinho
-    function removerItemCarrinho(nome) {
+    function removerItemCarrinho(name) {
       const tabelaItens = document.getElementById('itens-carrinho');
       const itensCarrinho = tabelaItens.getElementsByTagName('tr');
 
@@ -165,7 +196,7 @@
         const item = itensCarrinho[i];
         const nomeItem = item.getElementsByTagName('td')[0].textContent;
 
-        if (nomeItem === nome) {
+        if (nomeItem === name) {
           tabelaItens.removeChild(item);
           break;
         }
@@ -184,9 +215,11 @@
 
       const totalCarrinho = document.getElementById('total-carrinho');
       totalCarrinho.textContent = 'Total: R$ ' + total.toFixed(2);
-    }
 
+    }
+  }
   </script>
+
 </body>
 
 </html>

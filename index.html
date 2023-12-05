@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cafeteria da TI</title>
   <link rel="stylesheet" href="./styles/styles.css">
-  <script src="./script/script.js"></script>
 </head>
 
 <body>
@@ -32,14 +31,14 @@
     <section class="specialty-coffees">
       <h2>Nossos Cafés Especiais</h2>
       <div class="coffee-list">
+        
         <div class="coffee-item">
           <img src="./img/coffee1.jpeg" alt="Café Expresso">
           <h3 id="1">Café Expresso</h3>
           <p>Uma pequena quantidade de água quente é forçada através de uma pequena quantidade de café moído, resultando em um café concentrado e rico em sabor.</p>
           <p>Notas de sabor: Rico, encorpado e concentrado.</p>
-          <p>Preço: 6,00</p>
-          </br></br>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=1" class="btn">Adicionar ao Carrinho</a>
+          <p>Preço: R$ 6,00</p>
+          <a id="addCarrinho1" href="./page/carrinho.html?produto=1" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Expresso', preco: 6.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee2.jpeg" alt="Café Latte">
@@ -47,23 +46,23 @@
           <p>Uma combinação de café expresso e leite vaporizado, geralmente com uma camada de espuma de leite por cima. Pode ser adicionado xarope de sabores, como baunilha ou caramelo.</p>
           <p>Notas de sabor: Combinação equilibrada de café expresso, leite cremoso e, se adicionado, xarope de sabor.</p>
           <p>Preço: R$ 10,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=2" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho2" href="./page/carrinho.html?produto=2" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Latte', preco: 10.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee3.jpeg" alt="Cappuccino">
           <h3 id="3">Cappuccino</h3>
-          <p>Uma bebida composta por partes iguais de café expresso, leite vaporizado e espuma de leite. É comum polvilhar chocolate em pó ou canela por cima.</br></br></p>
+          <p>Uma bebida composta por partes iguais de café expresso, leite vaporizado e espuma de leite. É comum polvilhar chocolate em pó ou canela por cima.</p>
           <p>Notas de sabor: Café expresso suave, leite cremoso e espuma de leite. Pode ter uma pitada de chocolate ou canela.</p>
           <p>Preço: R$ 12,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=3" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho3" href="./page/carrinho.html?produto=3" class="btn" onclick="adicionarAoCarrinho({ name: 'Cappuccino', preco: 12.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee4.jpeg" alt="Macchiato">
           <h3 id="4">Macchiato</h3>
-          <p>Um café expresso com uma pequena quantidade de leite vaporizado ou espuma de leite adicionado por cima.</br></br></p>
+          <p>Um café expresso com uma pequena quantidade de leite vaporizado ou espuma de leite adicionado por cima.</p>
           <p>Notas de sabor: Café expresso com um toque de leite vaporizado ou espuma de leite.</p>
           <p>Preço: R$ 10,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=4" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho4" href="./page/carrinho.html?produto=4" class="btn" onclick="adicionarAoCarrinho({ name: 'Macchiato', preco: 10.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee5.jpeg" alt="Café Mocha">
@@ -71,15 +70,15 @@
           <p>Uma combinação de café expresso, leite vaporizado, chocolate em pó ou xarope de chocolate e, às vezes, chantilly por cima.</p>
           <p>Notas de sabor: Café expresso combinado com leite, chocolate e, às vezes, chantilly.</p>
           <p>Preço: R$ 14,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=5" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho5" href="./page/carrinho.html?produto=5" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Mocha', preco: 14.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee6.jpeg" alt="Café Americano">
           <h3 id="6">Café Americano</h3>
-          <p>Uma xícara de café expresso diluída em água quente. É uma opção mais suave e menos concentrada.</br></br></p>
+          <p>Uma xícara de café expresso diluída em água quente. É uma opção mais suave e menos concentrada.</p>
           <p>Notas de sabor: Café mais suave e menos concentrado, semelhante ao café filtrado.</p>
           <p>Preço: R$ 6,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=6" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho6" href="./page/carrinho.html?produto=6" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Americano', preco: 6.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
           <img src="./img/coffee7.jpeg" alt="Café Drip">
@@ -87,16 +86,16 @@
           <p>Café feito através do método de infusão, em que água quente passa lentamente através de grãos de café moídos em um filtro.</p>
           <p>Notas de sabor: Varia de acordo com o tipo de grão utilizado e o método de infusão. Pode ser suave, rico ou frutado.</p>
           <p>Preço: R$ 10,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=7" class="btn">Adicionar ao Carrinho</a>
+          <a id="addCarrinho7" href="./page/carrinho.html?produto=7" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Drip', preco: 10.00 })">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee8.jpeg" alt="Café Turco" >
+          <img src="./img/coffee8.jpeg" alt="Café Turco">
           <h3 id="8">Café Turco</h3>
           <p>Um método tradicional de preparação de café, em que o café é moído muito fino e fervido em água com açúcar, resultando em uma bebida forte e com sedimentos.</p>
           <p>Notas de sabor: Forte e encorpado, com um sabor intenso e sedimentos no fundo da xícara.</p>
           <p>Preço: R$ 10,00</p>
-          <a id="addCarrinho" href="./page/carrinho.html?produto=8" class="btn">Adicionar ao Carrinho</a>
-        </div> 
+          <a id="addCarrinho8" href="./page/carrinho.html?produto=8" class="btn" onclick="adicionarAoCarrinho({ name: 'Café Turco', preco: 10.00 })">Adicionar ao Carrinho</a>
+        </div>
       </div>
     </section>
   </main>
@@ -105,8 +104,88 @@
     <p>&copy; 2023 Cafeteria da TI. Todos os direitos reservados.</p>
   </footer>
 
+  <script>
+      // Função para adicionar o produto ao carrinho
+      function adicionarAoCarrinho(produto) {
+        const tabelaItens = document.getElementById('itens-carrinho');
+        const totalCarrinho = document.getElementById('total-carrinho');
+
+        // Adicionar o produto ao carrinho
+        const novaLinha = document.createElement('tr');
+
+        // Colunas / linha (exemplo)
+        const colunaNome = document.createElement('td');
+        colunaNome.textContent = produto.name;
+
+        const colunaQuantidade = document.createElement('td');
+        const inputQuantidade = document.createElement('input');
+        inputQuantidade.type = 'number';
+        inputQuantidade.value = '1';
+        inputQuantidade.min = '1';
+        colunaQuantidade.appendChild(inputQuantidade);
+
+        const colunaPreco = document.createElement('td');
+        colunaPreco.textContent = 'R$ ' + produto.preco.toFixed(2);
+
+        const colunaRemover = document.createElement('td');
+        const botaoRemover = document.createElement('button');
+        botaoRemover.textContent = 'Remover';
+        botaoRemover.addEventListener('click', () => removerItemCarrinho(produto.name));
+        colunaRemover.appendChild(botaoRemover);
+
+        // Add colunas à linha
+        novaLinha.appendChild(colunaNome);
+        novaLinha.appendChild(colunaQuantidade);
+        novaLinha.appendChild(colunaPreco);
+        novaLinha.appendChild(colunaRemover);
+
+        // Add nova linha à tabela
+        tabelaItens.appendChild(novaLinha);
+
+        // Atualizar itens no total do carrinho
+        let total = 0;
+        const itensCarrinho = tabelaItens.getElementsByTagName('tr');
+
+        for (let i = 0; i < itensCarrinho.length; i++) {
+          const item = itensCarrinho[i];
+          const precoTexto = item.getElementsByTagName('td')[2].textContent;
+          const preco = parseFloat(precoTexto.replace('R$', '').trim());
+          const quantidade = parseInt(item.getElementsByTagName('input')[0].value);
+          total += preco * quantidade;
+        }
+
+        totalCarrinho.textContent = 'Total: R$ ' + total.toFixed(2);
+      }
+
+      // Função remover item do carrinho
+      function removerItemCarrinho(name) {
+        const tabelaItens = document.getElementById('itens-carrinho');
+        const itensCarrinho = tabelaItens.getElementsByTagName('tr');
+
+        for (let i = 0; i < itensCarrinho.length; i++) {
+          const item = itensCarrinho[i];
+          const nomeItem = item.getElementsByTagName('td')[0].textContent;
+
+          if (nomeItem === name) {
+            tabelaItens.removeChild(item);
+            break;
+          }
+        }
+
+        // Atualizar total do carrinho
+        let total = 0;
+
+        for (let i = 0; i < itensCarrinho.length; i++) {
+          const item = itensCarrinho[i];
+          const precoTexto = item.getElementsByTagName('td')[2].textContent;
+          const preco = parseFloat(precoTexto.replace('R$', '').trim());
+          const quantidade = parseInt(item.getElementsByTagName('input')[0].value);
+          total += preco * quantidade;
+        }
+      }
+  
+  </script>
+
 </body>
 
 </html>
-
-
