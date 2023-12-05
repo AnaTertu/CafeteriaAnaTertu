@@ -12,6 +12,23 @@ describe('Cafeteria da TI - Teste de Seleção de Café', () => {
         // Verificar se a página contém nome Cafeteria da TI
         cy.contains("Cafeteria da TI")
 
+        cy.get('nav')
+        cy.contains("Home")
+        cy.get('h3 > a')
+        cy.contains("Carrinho")
+        cy.get('[href="/page/carrinho"]')
+        cy.contains("Dados do Cliente")
+        cy.get('ul > :nth-child(4) > a')
+
+        cy.get(':nth-child(1) > img')
+        cy.get(':nth-child(2) > img')
+        cy.get(':nth-child(3) > img')
+        cy.get(':nth-child(4) > img')
+        cy.get(':nth-child(5) > img')
+        cy.get(':nth-child(6) > img')
+        cy.get(':nth-child(7) > img')
+        cy.get(':nth-child(8) > img')
+
         cy.get(':nth-child(1) > #addCarrinho')
     });
 
