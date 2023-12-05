@@ -44,8 +44,10 @@ body {
     justify-content: center;
   }
   
-  nav ul li {
-    margin: 0 10px;
+  nav ul li h3{
+    color:#fff;
+    margin: 0 20px;
+    text-align:left;
   }
   
   /* Estilos da seção de destaque */
@@ -146,3 +148,8 @@ body {
     text-align: center;
     color: #fff;
   }
+
+.coffee-item img{
+  width: 250px!important;
+  height: 200px!important;
+}

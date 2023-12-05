@@ -16,7 +16,7 @@
 
   <nav>
     <ul>
-      <li><h3>Home</h3></li>
+      <li><a href="/">Home</a></li>
       <li><a href="#">Cafés Especiais</a></li>
       <li><a href="./page/carrinho.html">Carrinho</a></li>
       <li><a href="#">Contato</a></li>
@@ -34,7 +34,7 @@
       <h2>Nossos Cafés Especiais</h2>
       <div class="coffee-list">
         <div class="coffee-item">
-          <img src="./img/coffee1.jpeg" alt="Café Expresso">
+          <img src="coffee1.jpg" alt="Café Expresso">
           <h3 id="1">Café Expresso</h3>
           <p>Uma pequena quantidade de água quente é forçada através de uma pequena quantidade de café moído, resultando em um café concentrado e rico em sabor.</p>
           <p>Notas de sabor: Rico, encorpado e concentrado.</p>
@@ -43,7 +43,7 @@
           <a href="./page/carrinho.html?produto=1" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee2.jpeg" alt="Café Latte">
+          <img src="coffee2.jpg" alt="Café Latte">
           <h3 id="2">Café Latte</h3>
           <p>Uma combinação de café expresso e leite vaporizado, geralmente com uma camada de espuma de leite por cima. Pode ser adicionado xarope de sabores, como baunilha ou caramelo.</p>
           <p>Notas de sabor: Combinação equilibrada de café expresso, leite cremoso e, se adicionado, xarope de sabor.</p>
@@ -51,7 +51,7 @@
           <a href="./page/carrinho.html?produto=2" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee3.jpeg" alt="Cappuccino">
+          <img src="coffee3.jpg" alt="Cappuccino">
           <h3 id="3">Cappuccino</h3>
           <p>Uma bebida composta por partes iguais de café expresso, leite vaporizado e espuma de leite. É comum polvilhar chocolate em pó ou canela por cima.</br></br></p>
           <p>Notas de sabor: Café expresso suave, leite cremoso e espuma de leite. Pode ter uma pitada de chocolate ou canela.</p>
@@ -59,7 +59,7 @@
           <a href="./page/carrinho.html?produto=3" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee4.jpeg" alt="Macchiato">
+          <img src="coffee4.jpg" alt="Macchiato">
           <h3 id="4">Macchiato</h3>
           <p>Um café expresso com uma pequena quantidade de leite vaporizado ou espuma de leite adicionado por cima.</br></br></p>
           <p>Notas de sabor: Café expresso com um toque de leite vaporizado ou espuma de leite.</p>
@@ -67,7 +67,7 @@
           <a href="./page/carrinho.html?produto=4" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee5.jpeg" alt="Café Mocha">
+          <img src="coffee5.jpg" alt="Café Mocha">
           <h3 id="5">Café Mocha</h3>
           <p>Uma combinação de café expresso, leite vaporizado, chocolate em pó ou xarope de chocolate e, às vezes, chantilly por cima.</p>
           <p>Notas de sabor: Café expresso combinado com leite, chocolate e, às vezes, chantilly.</p>
@@ -75,7 +75,7 @@
           <a href="./page/carrinho.html?produto=5" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee6.jpeg" alt="Café Americano">
+          <img src="coffee6.jpg" alt="Café Americano">
           <h3 id="6">Café Americano</h3>
           <p>Uma xícara de café expresso diluída em água quente. É uma opção mais suave e menos concentrada.</br></br></p>
           <p>Notas de sabor: Café mais suave e menos concentrado, semelhante ao café filtrado.</p>
@@ -83,7 +83,7 @@
           <a href="./page/carrinho.html?produto=6" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee7.jpeg" alt="Café Drip">
+          <img src="coffee7.jpg" alt="Café Drip">
           <h3 id="7">Café Drip</h3>
           <p>Café feito através do método de infusão, em que água quente passa lentamente através de grãos de café moídos em um filtro.</p>
           <p>Notas de sabor: Varia de acordo com o tipo de grão utilizado e o método de infusão. Pode ser suave, rico ou frutado.</p>
@@ -91,7 +91,7 @@
           <a href="./page/carrinho.html?produto=7" class="btn">Adicionar ao Carrinho</a>
         </div>
         <div class="coffee-item">
-          <img src="./img/coffee8.jpeg" alt="Café Turco" >
+          <img src="coffee8.jpg" alt="Café Turco">
           <h3 id="8">Café Turco</h3>
           <p>Um método tradicional de preparação de café, em que o café é moído muito fino e fervido em água com açúcar, resultando em uma bebida forte e com sedimentos.</p>
           <p>Notas de sabor: Forte e encorpado, com um sabor intenso e sedimentos no fundo da xícara.</p>
