@@ -62,6 +62,53 @@
       const tabelaItens = document.getElementById('itens-carrinho');
       const totalCarrinho = document.getElementById('total-carrinho');
 
+      switch (produtoId) {
+        case '1':
+          produto.nome = 'Café Expresso';
+          produto.preco = 6.00;
+          break;
+        case '2':
+          produto.nome = 'Café Latte';
+          produto.preco = 10.00;
+          break;
+        case '3':
+          produto.nome = 'Cappuccino';
+          produto.preco = 12.00;
+          break;
+        case '4':
+          produto.nome = 'Macchiato';
+          produto.preco = 10.00;
+          break;
+        case '5':
+            produto.nome = 'Café Mocha';
+            produto.preco = 14.00;
+            break;
+        case '6':
+          produto.nome = 'Café Latte';
+          produto.preco = 10.00;
+          break;
+        case '7':
+          produto.nome = 'Cappuccino';
+          produto.preco = 12.00;
+          break;
+        case '8':
+          produto.nome = 'Macchiato';
+          produto.preco = 10.00;
+          break;
+      }
+
+      // Adicionar o produto ao carrinho
+      adicionarAoCarrinho(produto);
+    }
+
+    // Verificar se há um produto para adicionar ao carrinho
+    if (produtoId) {
+      // Obter o produto com base no ID
+      const produto = {
+        nome: '',
+        preco: 0
+      };
+
       // Criar nova linha na tabela
       const novaLinha = document.createElement('tr');
 
@@ -139,53 +186,6 @@
       totalCarrinho.textContent = 'Total: R$ ' + total.toFixed(2);
     }
 
-    // Verificar se há um produto para adicionar ao carrinho
-    if (produtoId) {
-      // Obter o produto com base no ID
-      const produto = {
-        nome: '',
-        preco: 0
-      };
-
-      switch (produtoId) {
-        case '1':
-          produto.nome = 'Café Expresso';
-          produto.preco = 6.00;
-          break;
-        case '2':
-          produto.nome = 'Café Latte';
-          produto.preco = 10.00;
-          break;
-        case '3':
-          produto.nome = 'Cappuccino';
-          produto.preco = 12.00;
-          break;
-        case '4':
-          produto.nome = 'Macchiato';
-          produto.preco = 10.00;
-          break;
-        case '5':
-            produto.nome = 'Café Mocha';
-            produto.preco = 14.00;
-            break;
-        case '6':
-          produto.nome = 'Café Latte';
-          produto.preco = 10.00;
-          break;
-        case '7':
-          produto.nome = 'Cappuccino';
-          produto.preco = 12.00;
-          break;
-        case '8':
-          produto.nome = 'Macchiato';
-          produto.preco = 10.00;
-          break;
-        // Adicionar casos para outros produtos, se necessário
-      }
-
-      // Adicionar o produto ao carrinho
-      adicionarAoCarrinho(produto);
-    }
   </script>
 </body>
 
