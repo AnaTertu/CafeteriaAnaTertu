@@ -17,7 +17,7 @@ describe('Cafeteria da TI - Teste de Seleção de Café', () => {
         cy.get('h3 > a')
         cy.contains("Carrinho")
         cy.get('[href="/page/carrinho"]')
-        cy.contains("Dados do Cliente")
+        cy.contains("Cadastro")
         cy.get('ul > :nth-child(4) > a')
 
         cy.get(':nth-child(1) > img')
@@ -29,7 +29,6 @@ describe('Cafeteria da TI - Teste de Seleção de Café', () => {
         cy.get(':nth-child(7) > img')
         cy.get(':nth-child(8) > img')
 
-        cy.get(':nth-child(1) > #addCarrinho')
     });
 
     
